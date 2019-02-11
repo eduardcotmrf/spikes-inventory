@@ -1,0 +1,36 @@
+{
+  "placements": {
+    "inline_0": {
+      "adServer": "custom_0",
+      "params": {
+        "url": "https://securepubads.g.doubleclick.net/gpt/pubads_impl_304.js"
+      }
+    },
+    "inline_1": {
+      "adServer": "smart_1",
+      "params": {
+        "url": "https://des.smartclip.net/ads?type=dyn&sz=400x320&plc=92800&elementId=news-body-center&ref=https%3A%2F%2Fwww.elconfidencial.com%2Fespana%2Fcataluna%2F2019-02-11%2Fpuigdemont-berlinale-documental-netflix-cataluna_1818374%2F&rnd=52996551"
+      }
+    },
+    "inline_2": {
+      "adServer": "custom_2",
+      "params": {
+        "url": "https://www.elconfidencial.com/javascript/v2/class/requireModules/ads/adsbygoogle.js?m=1543933939"
+      }
+    }
+  },
+  "adServers": {
+    "custom_0": {
+      "type": "custom",
+      "url": "https://securepubads.g.doubleclick.net/gpt/pubads_impl_304.js"
+    },
+    "smart_1": {
+      "type": "smartadserver",
+      "url": "https://des.smartclip.net/ads?type=dyn&sz=400x320&plc=92800&elementId=news-body-center&ref=https%3A%2F%2Fwww.elconfidencial.com%2Fespana%2Fcataluna%2F2019-02-11%2Fpuigdemont-berlinale-documental-netflix-cataluna_1818374%2F&rnd=52996551"
+    },
+    "custom_2": {
+      "type": "custom",
+      "url": "https://www.elconfidencial.com/javascript/v2/class/requireModules/ads/adsbygoogle.js?m=1543933939"
+    }
+  }
+}

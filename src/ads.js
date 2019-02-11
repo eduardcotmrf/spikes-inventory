@@ -1,26 +1,42 @@
+const URL = require('url');
 const CDP = require('chrome-remote-interface');
 const puppeteer = require('puppeteer');
 
 
-const ads = [];
-let position = 0;
 
-function addAdRequest(url) {
-    if (url.indexOf('doubleclick.net/gampad/ads') != -1 ) {
-        console.log(++position, url);
-    }
-}
+const BLACK_LISTED_FILES = require('./filters/blacklistFiles');
+const isAnAdRequest = require('./filters/adFilter');
+const Inventory = require('./inventory/inventory');
+
+const shouldAbort = (url) => {
+    let pathName = (URL.parse(url)).pathname;
+
+    return BLACK_LISTED_FILES.some((urlEnd) => pathName.endsWith(urlEnd));
+};
+
+
 
 (async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
+    // await page.setRequestInterception(true);
+    let position = -1;
 
     page.on('request', interceptedRequest => {
-        //TODO abortar totes les peticions de css,img, i adserver només qdarme amb la petició
-        addAdRequest(interceptedRequest.url());
+        const url = interceptedRequest.url();
+        // if (shouldAbort(url)) {
+        //     interceptedRequest.abort();
+        // } else
+        if (isAnAdRequest(url)) {
+            Inventory.addAdRequest(url, ++position);
+            // interceptedRequest.abort();
+        }
+        // else {
+        //     interceptedRequest.continue();
+        // }
     });
 
-    await page.goto('https://www.elconfidencial.com');
+    await page.goto('https://www.elconfidencial.com/espana/cataluna/2019-02-11/puigdemont-berlinale-documental-netflix-cataluna_1818374/');
 
     await page.click('button.cookiedisclaimer-accept');
 
@@ -28,7 +44,14 @@ function addAdRequest(url) {
         window.scrollTo(0,document.body.scrollHeight);
     });
 
-    await page.screenshot({path:"example.png"});
-  
-    //await browser.close()
+
+    // await page.screenshot({
+    //     path: 'tenantPage.png',
+    //     fullPage: true
+    // });
+
+    await browser.close();
+
+    Inventory.createInventory();
+
   })();
