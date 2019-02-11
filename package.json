@@ -1,0 +1,26 @@
+{
+  "name": "es6project",
+  "version": "1.0.0",
+  "description": "using babel with node",
+  "main": "app.js",
+  "scripts": {
+    "test": "node src/eyes-selenium.js",
+    "build": "babel --presets es2015 -d lib/ src"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browsermob": "0.0.2",
+    "browsermob-proxy-client": "^0.1.0",
+    "eyes.selenium": "^3.6.2"
+  },
+  "dependencies": {
+    "chrome-remote-interface": "^0.27.0",
+    "chromedriver": "^2.46.0",
+    "puppeteer": "^1.12.2",
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "web-log": "^1.0.8"
+  }
+}
