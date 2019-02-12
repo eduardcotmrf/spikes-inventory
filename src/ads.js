@@ -19,21 +19,23 @@ const shouldAbort = (url) => {
 (async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    // await page.setRequestInterception(true);
+    await page.setRequestInterception(true);
+
     let position = -1;
 
     page.on('request', interceptedRequest => {
         const url = interceptedRequest.url();
-        // if (shouldAbort(url)) {
-        //     interceptedRequest.abort();
-        // } else
-        if (isAnAdRequest(url)) {
-            Inventory.addAdRequest(url, ++position);
-            // interceptedRequest.abort();
+        if (shouldAbort(url)) {
+            interceptedRequest.abort();
+        } else {
+            if (isAnAdRequest(url)) {
+                Inventory.addAdRequest(url, ++position);
+                // interceptedRequest.abort(); // TODO this causes the website to think we are an AdBlocker
+            }
+
+            interceptedRequest.continue();
         }
-        // else {
-        //     interceptedRequest.continue();
-        // }
+
     });
 
     await page.goto('https://www.elconfidencial.com/espana/cataluna/2019-02-11/puigdemont-berlinale-documental-netflix-cataluna_1818374/');
@@ -45,10 +47,10 @@ const shouldAbort = (url) => {
     });
 
 
-    // await page.screenshot({
-    //     path: 'tenantPage.png',
-    //     fullPage: true
-    // });
+    await page.screenshot({
+        path: 'tenantPage.png',
+        fullPage: true
+    });
 
     await browser.close();
 
