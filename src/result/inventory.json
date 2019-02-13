@@ -2,38 +2,62 @@
 	"placements": {
 		"inline_0": {
 			"adServer": "dfp",
-			"params": {
-				"url": "https://securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1&pvsid=2377109212763664&correlator=2876718715637464&output=ldjh&callback=googletag.impl.pubads.callbackProxy1&impl=fifs&adsid=NT&json_a=1&eid=21062752%2C21063045&vrg=304&guci=2.2.0.0.2.2.0.0&plat=1%3A32776%2C2%3A32776&sc=1&sfv=1-0-32&iu_parts=21682112617%2Celconfidencial%2Cespana&enc_prev_ius=%2F0%2F1%2F2%2C%2F0%2F1%2F2%2C%2F0%2F1%2F2%2C%2F0%2F1%2F2%2C%2F0%2F1%2F2%2C%2F0%2F1%2F2&prev_iu_szs=980x250%7C980x90%7C970x250%7C970x90%2C300x250%7C300x600%7C300x300%2C320x100%7C300x100%2C300x250%7C300x600%7C300x300%2C300x250%7C300x300%2C654x82%7C654x200%7C654x177%7C468x60&prev_scp=marfeeltype%3DM%26ec_tags%3D16847%2C8578%2C2455%26ec_ptype%3Deditorial%26ec_jou%3D116%26ec_type%3D1%26ec_section%3D1%2C8%26ec_site%3D1%26ec_env%3Dproduction%26ec_page%3Dinner%26ec_pos%3Dmega1%26hb_format_smartadser%3Dbanner%26hb_source_smartadser%3Dclient%26hb_size_smartadserve%3D970x250%26hb_pb_smartadserver%3D0.04%26hb_adid_smartadserve%3D12804d3f7aba4b5%26hb_bidder_smartadser%3Dsmartadserver%26hb_format%3Dbanner%26hb_source%3Dclient%26hb_size%3D970x250%26hb_pb%3D0.04%26hb_adid%3D12804d3f7aba4b5%26hb_bidder%3Dsmartadserver%7Cmarfeeltype%3DM%26ec_tags%3D16847%2C8578%2C2455%26ec_ptype%3Deditorial%26ec_jou%3D116%26ec_type%3D1%26ec_section%3D1%2C8%26ec_site%3D1%26ec_env%3Dproduction%26ec_page%3Dinner%26ec_pos%3Droba1%7Cmarfeeltype%3DM%26ec_tags%3D16847%2C8578%2C2455%26ec_ptype%3Deditorial%26ec_jou%3D116%26ec_type%3D1%26ec_section%3D1%2C8%26ec_site%3D1%26ec_env%3Dproduction%26ec_page%3Dinner%26ec_pos%3Dboton1%7Cmarfeeltype%3DM%26ec_tags%3D16847%2C8578%2C2455%26ec_ptype%3Deditorial%26ec_jou%3D116%26ec_type%3D1%26ec_section%3D1%2C8%26ec_site%3D1%26ec_env%3Dproduction%26ec_page%3Dinner%26ec_pos%3Droba2%7Cmarfeeltype%3DM%26ec_tags%3D16847%2C8578%2C2455%26ec_ptype%3Deditorial%26ec_jou%3D116%26ec_type%3D1%26ec_section%3D1%2C8%26ec_site%3D1%26ec_env%3Dproduction%26ec_page%3Dinner%26ec_pos%3Droba3%7Cmarfeeltype%3DM%26ec_tags%3D16847%2C8578%2C2455%26ec_ptype%3Deditorial%26ec_jou%3D116%26ec_type%3D1%26ec_section%3D1%2C8%26ec_site%3D1%26ec_env%3Dproduction%26ec_page%3Dinner%26ec_pos%3Dtextlink1&eri=1&cookie_enabled=1&bc=15&abxe=1&lmt=1549983024&dt=1550011250236&dlt=1550011246572&idt=420&frm=20&biw=1280&bih=926&oid=3&adxs=128%2C826%2C826%2C826%2C831%2C142&adys=39%2C944%2C2470%2C2595%2C4965%2C4595&adks=1543384129%2C3491230613%2C3405564148%2C1344645984%2C724100950%2C971990512&ucis=1%7C2%7C3%7C4%7C5%7C6&ifi=1&u_tz=-300&u_his=2&u_h=1050&u_w=1680&u_ah=1027&u_aw=1680&u_cd=24&u_nplug=3&u_nmime=4&u_sd=1&flash=0&url=https%3A%2F%2Fwww.elconfidencial.com%2Fespana%2Fcataluna%2F2019-02-11%2Fpuigdemont-berlinale-documental-netflix-cataluna_1818374%2F&dssz=148&icsg=4503393401831424&std=0&vis=1&dmc=8&scr_x=0&scr_y=0&psz=1024x263%7C312x1926%7C312x1926%7C312x1926%7C312x285%7C597x3608&msz=1024x263%7C312x250%7C312x100%7C312x250%7C312x260%7C597x82&blev=1&bisch=1&ga_vid=588034681.1550011248&ga_sid=1550011250&ga_hid=910239287&fws=4%2C4%2C4%2C4%2C4%2C4",
-				"position": 0
-			}
+			"params": {}
 		},
 		"inline_1": {
 			"adServer": "dfp_1",
-			"params": {
-				"url": "https://imasdk.googleapis.com/js/sdkloader/vpaid_adapter.js?adtagurl=https://pubads.g.doubleclick.net/gampad/ads%3Fchannel%3Dvastadp%26slotname%3D/5555/VIDEOINTEXT/intext-adx%26gdfp_req%3Dtrue%26env%3Dvp%26tfcd%3D0%26output%3Dvast%26sz%3D320x240%257C400x300%257C640x360%257C640x480%26unviewed_position_start%3D1%26npa%3Dfalse%26video_url_to_fetch%3Dhttps://www.elconfidencial.com/espana/cataluna/2019-02-11/puigdemont-berlinale-documental-netflix-cataluna_1818374/%26vpmute%3Dfalse%26vpos%3Dpreroll",
-				"position": 1
-			}
+			"params": {}
 		},
 		"inline_2": {
 			"adServer": "dfp_2",
-			"params": {
-				"url": "https://pubads.g.doubleclick.net/gampad/ads?channel=vastadp%2Bvpaidadp_html5&slotname=%2F5555%2FVIDEOINTEXT%2Fintext-adx&gdfp_req=true&env=vp&tfcd=0&output=xml_vast4&sz=320x240%7C400x300%7C640x360%7C640x480&unviewed_position_start=1&npa=false&video_url_to_fetch=https%3A%2F%2Fwww.elconfidencial.com%2Fespana%2Fcataluna%2F2019-02-11%2Fpuigdemont-berlinale-documental-netflix-cataluna_1818374%2F&vpmute=false&vpos=preroll&sdkv=h.3.274.0&sdki=44d&correlator=3335293631198808&scor=229975286799993&adk=513187840&u_so=l&osd=2&frm=1&sdr=1&is_amp=0&adsid=NT&hl=en&cookie=ID%3D23feb8e6ef51320e%3AT%3D1550011250%3AS%3DALNI_MZQVgkRyqj1uLFkEB8-n_CwMZITDA&afvsz=200x200%2C250x250%2C300x250%2C450x50%2C468x60%2C480x70&url=https%3A%2F%2Fwww.elconfidencial.com%2Fespana%2Fcataluna%2F2019-02-11%2Fpuigdemont-berlinale-documental-netflix-cataluna_1818374%2F&ged=ve4_td2_tt0_pd2_la2000_er1700.0.2036.597_vi1700.0.2626.1280_vp100_eb24171",
-				"position": 2
-			}
+			"params": {}
+		},
+		"inline_3": {
+			"adServer": "dfp_3",
+			"params": {}
 		}
 	},
 	"adServers": {
 		"dfp": {
-			"correlator": "2876718715637464",
+			"slot": "105554924,aao",
+			"json": {
+				"targeting": {
+					"pos": "${TARGETING}"
+				}
+			},
 			"type": "doubleclick"
 		},
 		"dfp_1": {
+			"slot": "/105554924/aao/passback",
+			"width": "970",
+			"height": "90",
+			"json": {
+				"targeting": {
+					"pos": "${TARGETING}"
+				}
+			},
 			"type": "doubleclick"
 		},
 		"dfp_2": {
-			"slot": "/5555/VIDEOINTEXT/intext-adx",
-			"multi-size": "320x240,400x300,640x360,640x480",
-			"correlator": "3335293631198808",
+			"slot": "/105554924/aao/passback",
+			"width": "300",
+			"height": "250",
+			"json": {
+				"targeting": {
+					"pos": "${TARGETING}"
+				}
+			},
+			"type": "doubleclick"
+		},
+		"dfp_3": {
+			"slot": "/105554924/aao/passback",
+			"width": "300",
+			"height": "250",
+			"json": {
+				"targeting": {
+					"pos": "${TARGETING}"
+				}
+			},
 			"type": "doubleclick"
 		}
 	}

@@ -13,11 +13,16 @@ const getAdServerName = (adServers, adTypeName, position) => {
 
 class Inventory {
 	constructor() {
+		this.urls = [];
 		this.placements = {};
 		this.adServers = {};
 	}
 
 	addAdRequest(adType, url, position) {
+		this.urls.push({
+			position,
+			url
+		});
 		const adServerName = getAdServerName(this.adServers, adType.getName(), position);
 
 		this.adServers[`${adServerName}`] = buildAdServer(adType, url, position);
@@ -29,6 +34,9 @@ class Inventory {
 			placements: this.placements,
 			adServers: this.adServers
 		};
+	}
+	getUrls() {
+		return this.urls;
 	}
 }
 

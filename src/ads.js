@@ -8,10 +8,10 @@ const isBlackListed = require('./filters/blackList');
 const findAdType = require('./filters/adFilter');
 const Inventory = require('./inventory/Inventory');
 
-function saveInventoryJson(inventory) {
-    fs.writeFile(path.resolve(__dirname, './result/inventory.json'), JSON.stringify(inventory.getInventory(), null, '\t'), (err) => {
+function saveInFile(fileName, content) {
+    fs.writeFile(path.resolve(__dirname, `./result/${fileName}`),content, (err) => {
         if (err) throw err;
-        console.log('Inventory saved!');
+        console.log(`${fileName} saved!`);
     });
 }
 
@@ -20,7 +20,7 @@ async function autoScroll(page){
     await page.evaluate(async () => {
         await new Promise((resolve, reject) => {
             let totalHeight = 0;
-            let distance = 100;
+            let distance = 200;
             let timer = setInterval(() => {
                 let scrollHeight = document.body.scrollHeight;
                 window.scrollBy(0, distance);
@@ -48,12 +48,12 @@ async function autoScroll(page){
     await page.setRequestInterception(true);
 
     const inventory = new Inventory();
-    let position = -1;
+    let position = 0;
     page.on('request', interceptedRequest => {
         const url = interceptedRequest.url();
 
         if (isBlackListed(url)) {
-            interceptedRequest.abort();
+            // interceptedRequest.abort();
         } else {
             const adType = findAdType(url);
 
@@ -61,16 +61,15 @@ async function autoScroll(page){
                 inventory.addAdRequest(adType, url, ++position);
             }
 
-            interceptedRequest.continue();
         }
+            interceptedRequest.continue();
 
     });
 
-    await page.goto('https://www.elconfidencial.com/espana/cataluna/2019-02-11/puigdemont-berlinale-documental-netflix-cataluna_1818374/', {waitUntil: 'load'});
+    // await page.goto('https://adage.com/article/news/news-apple-valentine-s-day-buzzfeed-wake-call/316626/', { waitUntil: 'load' });
+    await page.goto('https://adage.com/article/news/news-apple-valentine-s-day-buzzfeed-wake-call/316626/');
 
-    await page.click('.cookiedisclaimer-accept');
-
-    await page.waitFor(1000);
+    // await page.click('.cookiedisclaimer-accept');
 
     await autoScroll(page);
 
@@ -82,7 +81,8 @@ async function autoScroll(page){
     //     fullPage: true
     // });
 
-    saveInventoryJson(inventory);
+    saveInFile('inventory.json',  JSON.stringify(inventory.getInventory(), null, '\t'));
+    saveInFile('urls.json',  JSON.stringify(inventory.getUrls(), null, '\t'));
 
   })();
 

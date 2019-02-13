@@ -1,10 +1,7 @@
-const buildPlacement = (adServerName, position, url) => {
+const buildPlacement = (adServerName) => {
 	return {
 		adServer: adServerName,
-		params: {
-			url: url,
-			position: position
-		}
+		params: {}
 	}
 };
 
