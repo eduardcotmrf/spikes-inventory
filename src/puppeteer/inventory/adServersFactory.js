@@ -4,7 +4,8 @@ const BUILDERS = {
 	'doubleclick': doubleClickBuilder
 };
 
-const buildAdServer = (adType, url, position) => {
+
+module.exports = function buildAdServer (adServers, adType, url, position) {
 	const builder = BUILDERS[adType.getType()];
 
 	let adServer = {};
@@ -15,6 +16,6 @@ const buildAdServer = (adType, url, position) => {
 	}
 
 	return adServer;
-};
 
-module.exports = buildAdServer;
+
+};
