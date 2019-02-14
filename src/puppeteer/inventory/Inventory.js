@@ -8,16 +8,23 @@ class Inventory {
 		this.urls = [];
 		this.placements = {};
 		this.adServers = {};
-		this.position = 0;
+		this.mosaicPosition = 0;
+		this.inlinePosition = 0;
 	}
 
 	addAdRequest(adType, url, level) {
-		const position = ++this.position;
+		let position;
 
+		if (isInline(level)) {
+			position = ++this.inlinePosition;
+		} else {
+			position = ++this.mosaicPosition;
+		}
 
 		this.urls.push({
 			position,
-			url
+			url,
+			level
 		});
 
 		const newAdServer = buildAdServer(this.adServers, adType, url, this.position);
@@ -69,10 +76,15 @@ function getDuplicatedAdServerKey(adServers, newAdServer) {
 	}
 }
 
-function getPlacementName(level, position) {
-	const levelName = level === 1? 'inline_' : 'mosaic_';
+function isInline(level) {
+	return level === 1;
+}
 
-	return `${levelName}_${position}`;
+function getPlacementName(level, initialPos) {
+	const levelName = isInline(level)? 'inline' : 'mosaic';
+	const position = initialPos > 1? `_${initialPos}`: '';
+
+	return `${levelName}${position}`;
 }
 
 

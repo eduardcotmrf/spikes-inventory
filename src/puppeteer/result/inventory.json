@@ -1,4 +1,70 @@
 {
-	"placements": {},
-	"adServers": {}
+	"placements": {
+		"mosaic": {
+			"adServer": "dfp",
+			"params": {}
+		},
+		"inline": {
+			"adServer": "dfp_1",
+			"params": {}
+		},
+		"inline_2": {
+			"adServer": "dfp_1",
+			"params": {}
+		},
+		"inline_3": {
+			"adServer": "dfp_1",
+			"params": {}
+		},
+		"inline_4": {
+			"adServer": "dfp_1",
+			"params": {}
+		},
+		"inline_5": {
+			"adServer": "dfp_1",
+			"params": {}
+		},
+		"inline_6": {
+			"adServer": "dfp_1",
+			"params": {}
+		},
+		"inline_7": {
+			"adServer": "dfp_1",
+			"params": {}
+		},
+		"inline_8": {
+			"adServer": "dfp_1",
+			"params": {}
+		},
+		"inline_9": {
+			"adServer": "dfp_1",
+			"params": {}
+		},
+		"inline_10": {
+			"adServer": "dfp_1",
+			"params": {}
+		}
+	},
+	"adServers": {
+		"dfp": {
+			"slot": "105554924,aao,home",
+			"json": {
+				"targeting": {
+					"pos": "${TARGETING}"
+				}
+			},
+			"type": "doubleclick"
+		},
+		"dfp_1": {
+			"slot": "/105554924/aao/video/article",
+			"width": "640",
+			"height": "480",
+			"json": {
+				"targeting": {
+					"pos": "${TARGETING}"
+				}
+			},
+			"type": "doubleclick"
+		}
+	}
 }
