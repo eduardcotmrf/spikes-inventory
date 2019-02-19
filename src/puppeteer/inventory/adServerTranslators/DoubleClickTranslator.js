@@ -1,13 +1,9 @@
-const URL = require('url').URL;
+const AbstractTranslator = require('./AbstractTranslator');
 
-const getParameters = (url) => {
-	const uri = new URL(url);
-
-	return uri.searchParams;
-};
 
 const addSlotName = (doubleClick, params) => {
-	doubleClick.slot = '__TO_BE_DEFINED__'
+	doubleClick.slot = '__TO_BE_DEFINED__';
+
 	if (params.has('slotname')) {
 		doubleClick.slot = params.get('slotname');
 	} else if (params.has('iu')) {
@@ -50,20 +46,35 @@ const addTargeting = (doubleClick, params) => {
 	};
 };
 
-const build = (url) => {
-	const doubleClick = {};
-	const params = getParameters(url);
 
-	if (params) {
-		addSlotName(doubleClick, params);
-		addSizeOrMultiSize(doubleClick, params);
-		addTargeting(doubleClick, params);
+class DoubleClickTranslator extends AbstractTranslator {
+	constructor() {
+		super();
+	}
+	static getName() {
+		return 'doubleclick';
 	}
 
-	return doubleClick;
-};
+	decorate(adServer, url, params) {
+		addSlotName(adServer, params);
+		addSizeOrMultiSize(adServer, params);
+		addTargeting(adServer, params);
+	}
+
+}
+//
+// const build = (url) => {
+// 	const doubleClick = {};
+// 	const params = getParameters(url);
+//
+// 	if (params) {
+// 		addSlotName(doubleClick, params);
+// 		addSizeOrMultiSize(doubleClick, params);
+// 		addTargeting(doubleClick, params);
+// 	}
+//
+// 	return doubleClick;
+// };
 
 
-module.exports = {
-	build
-};
+module.exports = DoubleClickTranslator

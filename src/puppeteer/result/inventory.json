@@ -4,43 +4,15 @@
 			"adServer": "dfp",
 			"params": {}
 		},
-		"inline": {
+		"mosaic_2": {
 			"adServer": "dfp_1",
 			"params": {}
 		},
-		"inline_2": {
+		"mosaic_3": {
 			"adServer": "dfp_1",
 			"params": {}
 		},
-		"inline_3": {
-			"adServer": "dfp_1",
-			"params": {}
-		},
-		"inline_4": {
-			"adServer": "dfp_1",
-			"params": {}
-		},
-		"inline_5": {
-			"adServer": "dfp_1",
-			"params": {}
-		},
-		"inline_6": {
-			"adServer": "dfp_1",
-			"params": {}
-		},
-		"inline_7": {
-			"adServer": "dfp_1",
-			"params": {}
-		},
-		"inline_8": {
-			"adServer": "dfp_1",
-			"params": {}
-		},
-		"inline_9": {
-			"adServer": "dfp_1",
-			"params": {}
-		},
-		"inline_10": {
+		"mosaic_4": {
 			"adServer": "dfp_1",
 			"params": {}
 		}
@@ -56,9 +28,9 @@
 			"type": "doubleclick"
 		},
 		"dfp_1": {
-			"slot": "/105554924/aao/video/article",
-			"width": "640",
-			"height": "480",
+			"slot": "/105554924/aao/passback",
+			"width": "300",
+			"height": "250",
 			"json": {
 				"targeting": {
 					"pos": "${TARGETING}"

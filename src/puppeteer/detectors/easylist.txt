@@ -513,6 +513,7 @@
 .advert.$domain=~advert.ae|~advert.io|~advert.ly
 .AdvertismentBottom.
 .advertmarket.
+.advertrecycling.
 .adwolf.
 .ae/ads/
 .ai/ads.
@@ -688,6 +689,7 @@
 .nu/ads/
 .nz/ads/
 .oasfile.
+.oastagging.
 .online/ads/
 .openad.
 .openx.$domain=~openx.com
@@ -4688,6 +4690,7 @@
 /get/ad.
 /get/ad/*
 /get/ad?
+/get?pvt=*&ab=$xmlhttprequest
 /get_ad_
 /get_adds_
 /get_ads.
@@ -5154,6 +5157,7 @@
 /javascript/ads/*
 /javascript/oas.
 /javascript/oas?
+/Javascripts/Abigail.js
 /javascripts/ads.
 /javascripts/ads/*
 /Javascripts/SBA-
@@ -5314,6 +5318,7 @@
 /loadadsmainparam.
 /loadadsparam.
 /loadadwiz.
+/loaded?b=$xmlhttprequest
 /loading_ads.
 /local-ad.
 /local_ads_
@@ -7217,6 +7222,7 @@ _ad_125x125.
 _ad_2012.
 _ad_250.
 _ad_300.
+_ad_336x280.
 _ad_350x250.
 _ad_728_
 _ad_actron.
@@ -7563,6 +7569,7 @@ _dart_interstitial.
 _dashad_
 _dfp.php?
 _dfp_targeting.
+_Digital_Ads-
 _dispad_
 _displayad_
 _displaytopads.
@@ -7742,6 +7749,7 @@ _top_ad.
 _top_ad_
 _topad.
 _tribalfusion.
+_txt_ad_
 _type=adimg&
 _UIM-Ads_
 _valueclick.

@@ -1,17 +1,8 @@
 const puppeteer = require('puppeteer');
 const { autoScroll } = require('./browserUtils');
 const isBlackListed = require('./filters/blackList');
-const findAdType = require('./filters/adFilter');
-
-const getLevel = (pagesToVisit, currentUrl) => {
-    Object.keys(pagesToVisit).forEach(key => {
-       if (pagesToVisit[key].url === currentUrl) {
-           return pagesToVisit[key].level;
-       }
-    });
-
-    return 0;
-};
+const detectAdServer = require('./detectors/detectors');
+const URL = require('url').URL;
 
 async function visitPage(type, url, level, page) {
     console.log(`\nNavigating to: ${type} with url: ${url}\n\n`);
@@ -54,19 +45,22 @@ async function getInventoryForPage(homePage, inventory) {
     try {
         let level = 0;
         const page = await browser.newPage();
+
         page.setViewport({ width: 1280, height: 926 });
+
         await page.setRequestInterception(true);
 
         page.on('request', interceptedRequest => {
             const url = interceptedRequest.url();
 
             if (isBlackListed(url)) {
+                // TODO commented for visual aid. Uncomment
                 // interceptedRequest.abort();
             } else {
-                const adType = findAdType(url);
+                const adServer = detectAdServer(url);
 
-                if (adType) {
-                    inventory.addAdRequest(adType, url, level);
+                if (adServer) {
+                    inventory.addAdRequest(adServer, url, level);
                 }
             }
             interceptedRequest.continue();
@@ -76,15 +70,15 @@ async function getInventoryForPage(homePage, inventory) {
 
         await visitPage('homePage', homePage, level, page);
 
-        const section = await getSectionUri(page);
-        level = section.level;
-
-        await visitPage(section.type, section.url, section.level, page);
-
-        const articlePage = await getArticleUri(page);
-        level = articlePage.level;
-
-        await visitPage(articlePage.type, articlePage.url, articlePage.level, page);
+        // const section = await getSectionUri(page);
+        // level = section.level;
+        //
+        // await visitPage(section.type, section.url, section.level, page);
+        //
+        // const articlePage = await getArticleUri(page);
+        // level = articlePage.level;
+        //
+        // await visitPage(articlePage.type, articlePage.url, articlePage.level, page);
 
 
 

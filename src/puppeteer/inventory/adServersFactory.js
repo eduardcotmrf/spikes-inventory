@@ -1,8 +1,8 @@
-const doubleClickBuilder = require('./adServers/doubleClickBuilder');
+const DoubleClickTranslator = require('./adServerTranslators/DoubleClickTranslator');
 
-const BUILDERS = {
-	'doubleclick': doubleClickBuilder
-};
+const BUILDERS = {};
+
+BUILDERS[`${DoubleClickTranslator.getName()}`] = new DoubleClickTranslator();
 
 
 module.exports = function buildAdServer (adServers, adType, url, position) {
@@ -16,6 +16,4 @@ module.exports = function buildAdServer (adServers, adType, url, position) {
 	}
 
 	return adServer;
-
-
 };
