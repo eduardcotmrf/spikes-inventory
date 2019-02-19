@@ -1,31 +1,265 @@
 {
 	"placements": {
 		"mosaic": {
-			"adServer": "dfp",
+			"adServer": "taboola",
 			"params": {}
 		},
 		"mosaic_2": {
-			"adServer": "dfp_1",
-			"params": {}
-		},
-		"mosaic_3": {
-			"adServer": "dfp_1",
+			"adServer": "taboola_1",
 			"params": {}
 		},
 		"mosaic_4": {
-			"adServer": "dfp_1",
+			"adServer": "dfp",
+			"params": {}
+		},
+		"mosaic_3": {
+			"adServer": "taboola_1",
 			"params": {}
 		},
 		"mosaic_5": {
-			"adServer": "dfp_1",
+			"adServer": "taboola_1",
 			"params": {}
 		},
 		"mosaic_6": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_7": {
 			"adServer": "dfp_1",
+			"params": {}
+		},
+		"mosaic_8": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_9": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_10": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_11": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_12": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_13": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_14": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_15": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_16": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_17": {
+			"adServer": "dfp_1",
+			"params": {}
+		},
+		"mosaic_18": {
+			"adServer": "dfp_1",
+			"params": {}
+		},
+		"mosaic_19": {
+			"adServer": "dfp_1",
+			"params": {}
+		},
+		"mosaic_20": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_21": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_22": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_23": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_24": {
+			"adServer": "dfp_1",
+			"params": {}
+		},
+		"mosaic_25": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_26": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_27": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_28": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_29": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_30": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_31": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_32": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_33": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_34": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_35": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_36": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_37": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_38": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_39": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_40": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_41": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_42": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_43": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_44": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_45": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_46": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_47": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_48": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_49": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_50": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_51": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_52": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_53": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_54": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_55": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_56": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_57": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_58": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_59": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_60": {
+			"adServer": "taboola_1",
+			"params": {}
+		},
+		"mosaic_61": {
+			"adServer": "taboola_1",
 			"params": {}
 		}
 	},
 	"adServers": {
+		"taboola": {
+			"article": "auto",
+			"publisher": "cdn.taboola.com",
+			"type": "taboola"
+		},
+		"taboola_1": {
+			"article": "auto",
+			"publisher": "wf.taboola.com",
+			"mode": " 'alternating-thumbnails-a'",
+			"container": " 'taboola-below-article-thumbnails'",
+			"placement": " 'Below Article Thumbnails'",
+			"target_type": " 'mix'",
+			"type": "taboola"
+		},
 		"dfp": {
 			"slot": "1018679,LD_Econo_y_Neg_1_960x65,LD_Econo_y_Neg_2_250x250,LD_Econo_y_Neg_6_300x250,LD_Econo_y_Neg_3_728x90,LD_Econo_y_Neg_7_970x90,Skin_Economia_Derecha_160x600,Skin_Economia_Izquierda_160x600,LD_Econo_y_Neg_4_468x60,LD_Economia_1x1",
 			"json": {

@@ -7,6 +7,9 @@ async function getTaboola(page) {
 		const taboola = {};
 
 		for(let i = 0; i < scripts.length; i++) {
+			const element = scripts[i];
+			const textContent = element.text;
+
 			if(textContent.includes('window._taboola = window._taboola || [];') && textContent.includes('mode')) {
 				var newText = textContent
 					.replace('window._taboola = window._taboola || [];', '')
@@ -37,9 +40,9 @@ class TaboolaTranslator extends AbstractTranslator {
 	}
 
 	async decorate(adServer, url, params, page) {
-		const taboola = await getTaboola();
+		const taboola = await getTaboola(page);
 		adServer.article = 'auto';
-		adServer.publisher = getHostName(url);
+		adServer.publisher = super.getHostName(url);
 
 		if (taboola) {
 			Object.assign(adServer, taboola);
