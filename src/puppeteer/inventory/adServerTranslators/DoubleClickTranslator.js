@@ -55,26 +55,14 @@ class DoubleClickTranslator extends AbstractTranslator {
 		return 'doubleclick';
 	}
 
-	decorate(adServer, url, params) {
+	async decorate(adServer, url, params, page) {
 		addSlotName(adServer, params);
 		addSizeOrMultiSize(adServer, params);
 		addTargeting(adServer, params);
+
+		return adServer;
 	}
 
 }
-//
-// const build = (url) => {
-// 	const doubleClick = {};
-// 	const params = getParameters(url);
-//
-// 	if (params) {
-// 		addSlotName(doubleClick, params);
-// 		addSizeOrMultiSize(doubleClick, params);
-// 		addTargeting(doubleClick, params);
-// 	}
-//
-// 	return doubleClick;
-// };
-
 
 module.exports = DoubleClickTranslator

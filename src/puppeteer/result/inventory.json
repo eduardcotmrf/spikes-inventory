@@ -15,11 +15,19 @@
 		"mosaic_4": {
 			"adServer": "dfp_1",
 			"params": {}
+		},
+		"mosaic_5": {
+			"adServer": "dfp_1",
+			"params": {}
+		},
+		"mosaic_6": {
+			"adServer": "dfp_1",
+			"params": {}
 		}
 	},
 	"adServers": {
 		"dfp": {
-			"slot": "105554924,aao,home",
+			"slot": "1018679,LD_Econo_y_Neg_1_960x65,LD_Econo_y_Neg_2_250x250,LD_Econo_y_Neg_6_300x250,LD_Econo_y_Neg_3_728x90,LD_Econo_y_Neg_7_970x90,Skin_Economia_Derecha_160x600,Skin_Economia_Izquierda_160x600,LD_Econo_y_Neg_4_468x60,LD_Economia_1x1",
 			"json": {
 				"targeting": {
 					"pos": "${TARGETING}"
@@ -28,7 +36,7 @@
 			"type": "doubleclick"
 		},
 		"dfp_1": {
-			"slot": "/105554924/aao/passback",
+			"slot": "/1018679/Passback_Tag_300x250",
 			"width": "300",
 			"height": "250",
 			"json": {

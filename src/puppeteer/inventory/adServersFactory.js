@@ -1,17 +1,19 @@
 const DoubleClickTranslator = require('./adServerTranslators/DoubleClickTranslator');
+const TaboolaTranslator = require('./adServerTranslators/TaboolaTranslator');
 
 const BUILDERS = {};
 
 BUILDERS[`${DoubleClickTranslator.getName()}`] = new DoubleClickTranslator();
+BUILDERS[`${TaboolaTranslator.getName()}`] = new TaboolaTranslator();
 
 
-module.exports = function buildAdServer (adServers, adType, url, position) {
+module.exports = async function buildAdServer (adServers, adType, url, position, page) {
 	const builder = BUILDERS[adType.getType()];
 
 	let adServer = {};
 
 	if (builder) {
-		adServer = builder.build(url, position);
+		adServer = await builder.build(url, position, page);
 		adServer.type = adType.getType();
 	}
 

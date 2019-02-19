@@ -50,7 +50,7 @@ async function getInventoryForPage(homePage, inventory) {
 
         await page.setRequestInterception(true);
 
-        page.on('request', interceptedRequest => {
+        page.on('request', async interceptedRequest => {
             const url = interceptedRequest.url();
 
             if (isBlackListed(url)) {
@@ -60,7 +60,7 @@ async function getInventoryForPage(homePage, inventory) {
                 const adServer = detectAdServer(url);
 
                 if (adServer) {
-                    inventory.addAdRequest(adServer, url, level);
+                    await inventory.addAdRequest(adServer, url, level, page);
                 }
             }
             interceptedRequest.continue();

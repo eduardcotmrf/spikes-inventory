@@ -5,18 +5,23 @@ class AbstractTranslator {
 
 	}
 
+	getHostName(url) {
+		const uri = new URL(url);
+		return uri.hostname;
+	}
+
 	getParameters(url) {
 		const uri = new URL(url);
 
 		return uri.searchParams;
 	}
 
-	build(url) {
+	async build(url, position, page) {
 		const adServer = {};
 		const params = this.getParameters(url);
 
 		if (params) {
-			this.decorate(adServer, url, params);
+			await this.decorate(adServer, url, params, page);
 		}
 		return adServer;
 	}

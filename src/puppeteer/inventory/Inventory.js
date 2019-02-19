@@ -12,7 +12,7 @@ class Inventory {
 		this.inlinePosition = 0;
 	}
 
-	addAdRequest(adType, url, level) {
+	async addAdRequest(adType, url, level, page) {
 		let position;
 
 		if (isInline(level)) {
@@ -27,7 +27,7 @@ class Inventory {
 			level
 		});
 
-		const newAdServer = buildAdServer(this.adServers, adType, url, this.position);
+		const newAdServer = await buildAdServer(this.adServers, adType, url, this.position, page);
 		const duplicatedAdServerKey = getDuplicatedAdServerKey(this.adServers, newAdServer);
 
 		let adServerName;

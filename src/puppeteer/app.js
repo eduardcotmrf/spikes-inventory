@@ -21,7 +21,7 @@ function saveInFile(fileName, content) {
 	// 	// args: ['--no-sandbox', '--disable-setuid-sandbox', '--incognito'],
 	// 	args: ['--no-sandbox', '--disable-setuid-sandbox'],
 	// });
-	const homePage = 'https://adage.com';
+	const homePage = 'https://listindiario.com/economia/2019/02/19/554256/gobierno-comunica-posposicion-firma-del-pacto-electrico';
 
 	try {
 		// const pagesToVisit = await extractPagesToVisit(browser, 'https://listindiario.com/');
