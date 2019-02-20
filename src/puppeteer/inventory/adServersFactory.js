@@ -1,10 +1,12 @@
 const DoubleClickTranslator = require('./adServerTranslators/DoubleClickTranslator');
 const TaboolaTranslator = require('./adServerTranslators/TaboolaTranslator');
+const SmartAdServerTranslator = require('./adServerTranslators/SmartAdServerTranslator');
 
 const BUILDERS = {};
 
 BUILDERS[`${DoubleClickTranslator.getName()}`] = new DoubleClickTranslator();
 BUILDERS[`${TaboolaTranslator.getName()}`] = new TaboolaTranslator();
+BUILDERS[`${SmartAdServerTranslator.getName()}`] = new SmartAdServerTranslator();
 
 
 module.exports = async function buildAdServer (adServers, adType, url, position, page) {
