@@ -21,7 +21,10 @@ function saveInFile(fileName, content) {
 	// 	// args: ['--no-sandbox', '--disable-setuid-sandbox', '--incognito'],
 	// 	args: ['--no-sandbox', '--disable-setuid-sandbox'],
 	// });
-	const homePage = 'https://listindiario.com/economia/2019/02/19/554256/gobierno-comunica-posposicion-firma-del-pacto-electrico';
+	// const homePage = 'https://www.laineygossip.com/a-sad-rat-who-got-stuck-and-what-else-for-february-27-2019/52094?fromt=yes';
+	// const homePage = 'https://www.elnueve.com/consulta-si-edemsa-te-tiene-que-devolver-dinero?fromt=yes';
+	const homePage = 'https://www.esmaelmorais.com.br/2019/03/google-reconhece-jose-de-abreu-como-presidente-do-brasil/';
+	// const homePage = 'https://listindiario.com/economia/2019/02/19/554256/gobierno-comunica-posposicion-firma-del-pacto-electrico?fromt=yes';
 
 	try {
 		// const pagesToVisit = await extractPagesToVisit(browser, 'https://listindiario.com/');

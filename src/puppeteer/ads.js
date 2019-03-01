@@ -1,4 +1,7 @@
 const puppeteer = require('puppeteer');
+const devices = require('puppeteer/DeviceDescriptors');
+const iPhone = devices['iPhone 6'];
+
 const { autoScroll } = require('./browserUtils');
 const isBlackListed = require('./filters/blackList');
 const detectAdServer = require('./detectors/detectors');
@@ -45,6 +48,7 @@ async function getInventoryForPage(homePage, inventory) {
     try {
         let level = 0;
         const page = await browser.newPage();
+        // await page.emulate(iPhone);
 
         page.setViewport({ width: 1280, height: 926 });
 

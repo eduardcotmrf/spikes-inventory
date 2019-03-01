@@ -43,7 +43,12 @@ detectors.push(new Detector('smartadserver', 'smart', [
 
 detectors.push(new Detector('taboola', 'taboola', [
 	'/ads/taboola/*',
-	'taboola.com'
+	// 'taboola.com'
+
+]));
+
+detectors.push(new Detector('teads', 'teads', [
+	'teads.tv/page/*/ad',
 
 ]));
 
