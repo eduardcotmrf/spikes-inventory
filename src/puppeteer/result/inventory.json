@@ -1,0 +1,44 @@
+{
+	"placements": {
+		"mosaic": {
+			"adServer": "dfp",
+			"params": {}
+		},
+		"mosaic_2": {
+			"adServer": "dfp_1",
+			"params": {}
+		},
+		"mosaic_3": {
+			"adServer": "teads",
+			"params": {}
+		}
+	},
+	"adServers": {
+		"dfp": {
+			"slot": "/341649886/eleicoes_dhtml",
+			"width": "1",
+			"height": "1",
+			"json": {
+				"targeting": {
+					"pos": "${TARGETING}"
+				}
+			},
+			"type": "doubleclick"
+		},
+		"dfp_1": {
+			"slot": "/341649886/eleicoes_dhtml",
+			"width": "1",
+			"height": "1",
+			"json": {
+				"targeting": {
+					"pos": "${TARGETING}"
+				}
+			},
+			"type": "doubleclick"
+		},
+		"teads": {
+			"pid": "86425",
+			"type": "teads"
+		}
+	}
+}

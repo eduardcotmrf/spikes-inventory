@@ -19,6 +19,7 @@
   "dependencies": {
     "chrome-remote-interface": "^0.27.0",
     "chromedriver": "^2.46.0",
+    "deep-equal": "^1.0.1",
     "puppeteer": "^1.12.2",
     "selenium-webdriver": "^4.0.0-alpha.1",
     "web-log": "^1.0.8"

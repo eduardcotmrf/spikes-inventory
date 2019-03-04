@@ -1,0 +1,68 @@
+const AbstractTranslator = require('./AbstractTranslator');
+
+
+const addSlotName = (doubleClick, params) => {
+	doubleClick.slot = '__TO_BE_DEFINED__';
+
+	if (params.has('slotname')) {
+		doubleClick.slot = params.get('slotname');
+	} else if (params.has('iu')) {
+		doubleClick.slot = params.get('iu');
+	} else if (params.has('iu_parts')) {
+		doubleClick.slot = params.get('iu_parts');
+	}
+};
+
+const addSize = (doubleClick, sz) => {
+	const dimensions = sz.split('x');
+	doubleClick.width = '${WIDTH}';
+	doubleClick.height = '${HEIGHT}';
+
+	if (dimensions.length >= 2) {
+		doubleClick.width = dimensions[0];
+		doubleClick.height= dimensions[1];
+	}
+};
+
+const addSizeOrMultiSize = (doubleClick, params) => {
+	if (params.has('sz')) {
+		const sz = params.get('sz');
+
+		if (sz.includes('|')) {
+			doubleClick['multi-size'] = sz.split('|').join(',');
+		} else if (sz.includes(',')) {
+			doubleClick['multi-size'] = sz;
+		} else if (sz.includes('x')) {
+			addSize(doubleClick, sz);
+		}
+	}
+};
+
+const addTargeting = (doubleClick, params) => {
+	doubleClick.json = {
+		targeting: {
+			pos: "${TARGETING}"
+		}
+	};
+};
+
+
+class DoubleClickTranslator extends AbstractTranslator {
+	constructor() {
+		super();
+	}
+	static getName() {
+		return 'doubleclick';
+	}
+
+	async decorate(adServer, url, params, page) {
+		addSlotName(adServer, params);
+		addSizeOrMultiSize(adServer, params);
+		addTargeting(adServer, params);
+
+		return adServer;
+	}
+
+}
+
+module.exports = DoubleClickTranslator
